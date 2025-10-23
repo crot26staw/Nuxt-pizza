@@ -25,6 +25,7 @@
     "@nuxtjs/device": "^3.2.4",
     "@nuxtjs/robots": "^5.5.1",
     "@nuxtjs/sitemap": "^7.4.3",
+    "@nuxtjs/supabase": "^2.0.1",
     "@pinia/nuxt": "^0.11.1",
     "@vee-validate/nuxt": "^4.15.1",
     "json-server": "^1.0.0-beta.3",

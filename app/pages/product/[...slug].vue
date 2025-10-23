@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+
+// definePageMeta({
+//     layout: 'modal'
+// })
+
 import type { Product } from '~/shared/types/product';
 const route = useRoute()
 const { data: products, status, error, refresh, clear } = await useAsyncData<Product[]>(
