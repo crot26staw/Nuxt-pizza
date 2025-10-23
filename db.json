@@ -1,0 +1,487 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "cat_id": 2,
+            "cat_slug": "myasnye",
+            "name": "Чизбургер-пицца",
+            "slug": "chizburger-pizza",
+            "img": "/chizburger.png",
+            "price": 395,
+            "defaultParams": {
+                "var_id": 11,
+                "size": 26,
+                "weight": "тонкое"
+            },
+            "variables": [
+                {
+                    "var_id": 11,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 12,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 13,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 14,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 15,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 16,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "cat_id": 3,
+            "cat_slug": "vegan",
+            "name": "Сырная",
+            "slug": "sirnya",
+            "img": "/cheez.png",
+            "price": 450,
+            "defaultParams": {
+                "var_id": 22,
+                "size": 30,
+                "weight": "тонкое"
+            },
+            "variables": [
+                {
+                    "var_id": 21,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 22,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 23,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 24,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 25,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 26,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "cat_id": 5,
+            "name": "Креветки по-азиатски",
+            "slug": "krevetki-po-aziatsky",
+            "cat_slug": "ostrye",
+            "img": "/krevetka.png",
+            "price": 290,
+            "defaultParams": {
+                "var_id": 36,
+                "size": 40,
+                "weight": "традиционное"
+            },
+            "variables": [
+                {
+                    "var_id": 31,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 32,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 33,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 34,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 35,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 36,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "cat_id": 2,
+            "cat_slug": "myasnye",
+            "name": "Сырный цыпленок",
+            "slug": "sirny-ciplyonok",
+            "img": "/chiken.png",
+            "price": 385,
+            "defaultParams": {
+                "var_id": 44,
+                "size": 26,
+                "weight": "традиционное"
+            },
+            "variables": [
+                {
+                    "var_id": 41,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 42,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 43,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 44,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 45,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 46,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "cat_id": 3,
+            "cat_slug": "vegan",
+            "name": "Четыре сыра",
+            "slug": "chetyre-syra",
+            "img": "/cheez.png",
+            "price": 400,
+            "defaultParams": {
+                "var_id": 55,
+                "size": 30,
+                "weight": "традиционное"
+            },
+            "variables": [
+                {
+                    "var_id": 51,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 52,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 53,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 54,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 55,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 56,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "cat_id": 4,
+            "cat_slug": "gril",
+            "name": "Мексиканская",
+            "slug": "meksykyanskya",
+            "img": "/chizburger.png",
+            "price": 410,
+            "defaultParams": {
+                "var_id": 64,
+                "size": 26,
+                "weight": "традиционное"
+            },
+            "variables": [
+                {
+                    "var_id": 61,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 62,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 63,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 64,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 65,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 66,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "cat_id": 5,
+            "cat_slug": "ostrye",
+            "name": "С морепродуктами",
+            "slug": "s-moreproductamy",
+            "img": "/krevetka.png",
+            "price": 345,
+            "defaultParams": {
+                "var_id": 76,
+                "size": 40,
+                "weight": "традиционное"
+            },
+            "variables": [
+                {
+                    "var_id": 71,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 72,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 73,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 74,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 75,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 76,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "cat_id": 6,
+            "cat_slug": "zakrytye",
+            "name": "Ассорти",
+            "slug": "assorty",
+            "img": "/chiken.png",
+            "price": 390,
+            "defaultParams": {
+                "var_id": 86,
+                "size": 40,
+                "weight": "традиционное"
+            },
+            "variables": [
+                {
+                    "var_id": 81,
+                    "size": 26,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 82,
+                    "size": 30,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 83,
+                    "size": 40,
+                    "weight": "тонкое"
+                },
+                {
+                    "var_id": 84,
+                    "size": 26,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 85,
+                    "size": 30,
+                    "weight": "традиционное"
+                },
+                {
+                    "var_id": 86,
+                    "size": 40,
+                    "weight": "традиционное"
+                }
+            ],
+            "params": {
+                "size": [
+                    26,
+                    30,
+                    40
+                ],
+                "weight": [
+                    "тонкое",
+                    "традиционное"
+                ]
+            }
+        }
+    ],
+    "categories": [
+        {
+            "id": 2,
+            "name": "Мясные",
+            "slug": "myasnye"
+        },
+        {
+            "id": 3,
+            "name": "Вегетарианская",
+            "slug": "vegan"
+        },
+        {
+            "id": 4,
+            "name": "Гриль",
+            "slug": "gril"
+        },
+        {
+            "id": 5,
+            "name": "Острые",
+            "slug": "ostrye"
+        },
+        {
+            "id": 6,
+            "name": "Закрытые",
+            "slug": "zakrytye"
+        }
+    ]
+}

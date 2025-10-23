@@ -1,0 +1,226 @@
+@use 'assets/styles/base/fonts' as f;
+
+@mixin lead-xxl {
+  font-size: 330px;
+  line-height: 330px;
+  letter-spacing: -6px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin lead-xl {
+  font-size: 310px;
+  line-height: 279px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin lead-l {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 90px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin lead-m {
+  font-size: 90px;
+  line-height: 81px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin lead-s {
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 72px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin lead-xs {
+  font-size: 68px;
+  line-height: 61.2px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin lead-xxs {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 45px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin title-l {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 43.2px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin title-m {
+  font-size: 40px;
+  line-height: 36px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin title-s {
+  font-size: 32px;
+  line-height: 32px;
+
+  @include f.font-family(bebas);
+}
+
+@mixin title-xs {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin title-xxs {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+%display-l {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+
+  @include f.font-family(caveat);
+}
+
+@mixin display-l {
+  @extend %display-l;
+}
+
+@mixin display-lu {
+  text-transform: uppercase;
+
+  @extend %display-l;
+}
+
+@mixin display-m {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+
+  @include f.font-family(caveat);
+}
+
+@mixin text-xxl {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31.2px;
+
+  @include f.font-family(inter);
+}
+
+@mixin text-xl {
+  font-size: 20px;
+  line-height: 24px;
+
+  @include f.font-family(inter);
+}
+
+@mixin text-l {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25.2px;
+
+  @include f.font-family(inter);
+}
+
+@mixin text-m {
+  font-size: 16px;
+  line-height: 19.2px;
+
+  @include f.font-family(inter);
+}
+
+@mixin text-mu {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+  text-transform: uppercase;
+
+  @include f.font-family(inter);
+}
+
+@mixin text-su {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14.4px;
+  text-transform: uppercase;
+
+  @include f.font-family(inter);
+}
+
+@mixin text-xs {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-variant-numeric: lining-nums proportional-nums;
+
+  @include f.font-family(inter);
+}
+
+@mixin button-s {
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin button-xs {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin button-xxs {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}
+
+@mixin button-xxxs {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  @include f.font-family(bebas);
+}

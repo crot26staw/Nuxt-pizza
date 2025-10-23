@@ -1,0 +1,32 @@
+@forward "reset";
+@forward "general";
+@use "../adaptive" as a;
+@use "shared" as s;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 400;
+  font-family: inter, Arial, BlinkMacSystemFont, -apple-system, "segoe ui",
+  Roboto, Oxygen, Ubuntu, Cantarell, "open sans", "helvetica neue", sans-serif;
+
+  @include s.px-to-vw(16, 1440);
+
+  @include a.tablet {
+    @include s.px-to-vw(16, 768);
+  }
+
+  @include a.mobile {
+    @include s.px-to-vw(16, 375);
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.button-link {
+  text-decoration: none;
+}

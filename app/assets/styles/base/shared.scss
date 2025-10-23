@@ -1,0 +1,40 @@
+@use "functions";
+@use "sass:map";
+@use "sass:math";
+
+@mixin font-face($font-name, $font-weights...) {
+  $weight-map: (
+    100: 'thin',
+    200: 'extralight',
+    300: 'light',
+    400: 'regular',
+    500: 'medium',
+    600: 'semibold',
+    700: 'bold',
+    800: 'extrabold',
+    900: 'black'
+  );
+  $file-font-name: functions.str-replace($font-name, " ", "");
+
+  @each $font-weight in $font-weights {
+    $font-weight-text: map.get($weight-map, $font-weight);
+
+    @if not $font-weight-text {
+      $font-weight-text: 'Regular';
+    }
+
+    @font-face {
+      font-weight: $font-weight;
+      font-family: $font-name;
+      font-style: normal;
+      src: url('@/assets/fonts/#{$file-font-name}/#{$file-font-name}-#{$font-weight-text}.woff2') format('woff2'), url('@/assets/fonts/#{$file-font-name}/#{$file-font-name}-#{$font-weight-text}.woff') format('woff');
+      font-display: swap;
+    }
+  }
+}
+
+@mixin px-to-vw($fontSize, $screenWidth) {
+  $vw: (math.div($fontSize, $screenWidth) * 100);
+
+  font-size: #{$vw}vw;
+}

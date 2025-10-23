@@ -1,0 +1,82 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "node .utils/audit.cjs",
+    "build": "nuxt build",
+    "postbuild": "node .utils/check-env.cjs",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "postgenerate": "node .utils/check-env.cjs",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare && simple-git-hooks && node .utils/audit.cjs",
+    "upgrade": "npm install -g npm-check-updates && ncu --interactive --format group",
+    "lint:fix": "eslint --fix",
+    "lint:style:fix": "stylelint \"**/*.{css,scss,vue}\" --cache --fix",
+    "utils:audit": "node .utils/audit.cjs",
+    "utils:pre-commit-audit": "node .utils/pre-commit-audit.cjs",
+    "utils:unlighthouse": "node .utils/unlighthouse.cjs",
+    "utils:favicons": "node .utils/favicons.cjs",
+    "utils:check-env": "node .utils/check-env.cjs"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.11.0",
+    "@nuxtjs/device": "^3.2.4",
+    "@nuxtjs/robots": "^5.5.1",
+    "@nuxtjs/sitemap": "^7.4.3",
+    "@pinia/nuxt": "^0.11.1",
+    "@vee-validate/nuxt": "^4.15.1",
+    "json-server": "^1.0.0-beta.3",
+    "maska": "^3.2.0",
+    "nuxt": "^4.0.3",
+    "nuxt-gtag": "^3.0.3",
+    "nuxt-security": "^2.4.0",
+    "nuxt-seo-utils": "^7.0.14",
+    "nuxt-yandex-metrika": "^1.2.9",
+    "pinia": "^3.0.3",
+    "pinia-plugin-persistedstate": "^4.5.0",
+    "typograf": "^7.4.4",
+    "v-mask": "^2.3.0",
+    "vue": "^3.5.20",
+    "vue-router": "^4.5.1",
+    "vue-the-mask": "^0.11.1",
+    "vue-yandex-maps": "^2.2.3",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.9.0",
+    "@nuxt/eslint-config": "^1.9.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-anti-trojan-source": "^1.1.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-no-secrets": "^2.2.1",
+    "eslint-plugin-no-unsanitized": "^4.1.4",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-regexp": "^2.10.0",
+    "eslint-plugin-security": "^3.0.1",
+    "postcss-pxtorem": "^6.1.0",
+    "sass-embedded": "^1.91.0",
+    "sharp": "^0.33.0",
+    "simple-git-hooks": "^2.12.0",
+    "stylelint": "^16.23.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-rational-order-fix": "^0.1.9",
+    "stylelint-config-recess-order": "^7.2.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^7.0.0",
+    "to-ico": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "volta": {
+    "node": "22.17.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run utils:pre-commit-audit"
+  }
+}

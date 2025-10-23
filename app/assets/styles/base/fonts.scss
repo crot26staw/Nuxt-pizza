@@ -1,0 +1,23 @@
+@use 'shared' as s;
+@use 'sass:map';
+@include s.font-face('caveat', 400);
+@include s.font-face('bebas', 400);
+@include s.font-face('inter', 100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+$fonts: (
+  caveat: 'Caveat',
+  bebas: 'Bebas',
+  inter: 'Inter'
+);
+$font-fallbacks: arial, blinkmacsystemfont, -apple-system, "Segoe UI",
+roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif !default;
+
+@mixin font-family($font-key) {
+  $primary-font: map.get($fonts, $font-key);
+
+  @if $primary-font == null {
+    @error "Font key `#{$font-key}` not found in $fonts map.";
+  }
+
+  font-family: $primary-font, $font-fallbacks;
+}
