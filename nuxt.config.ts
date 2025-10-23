@@ -39,20 +39,7 @@ export default defineNuxtConfig({
     'pinia-plugin-persistedstate/nuxt',
 
     // Модуль валидации
-    [
-      '@vee-validate/nuxt',
-      {
-        // disable or enable auto imports
-        autoImports: true,
-        // Use different names for components
-        componentNames: {
-          Form: 'VeeForm',
-          Field: 'VeeField',
-          FieldArray: 'VeeFieldArray',
-          ErrorMessage: 'VeeErrorMessage',
-        },
-      },
-    ],
+    '@vee-validate/nuxt',
 
     // Модуль яндекс карт
     'vue-yandex-maps/nuxt',
