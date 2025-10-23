@@ -23,7 +23,6 @@ let address = ref<string>('');
 
 const hanldeMarker = (event: any) => {
     coord.value = event;
-
 }
 
 const logMapClick: DomEventHandler = (object, event) => hanldeMarker(event.coordinates);
@@ -210,9 +209,10 @@ watch(coord, () => {
         }
     }
 
-    &__map-wrapper{
-        height: 500px;
-    }
+    // &__map-wrapper{
+    //     height: 500px;
+    //     flex-shrink: 0;
+    // }
 
     &__map {
         border-radius: 32px;

@@ -44,6 +44,9 @@ export default defineNuxtConfig({
     // Модуль яндекс карт
     'vue-yandex-maps/nuxt',
 
+    // Модуль авторизации
+    // '@nuxtjs/supabase',
+
     // Модуль Яндекс.Метрики
     ...(process.env.NUXT_YANDEX_METRIKA_COUNTER_ID
       ? [
@@ -62,6 +65,18 @@ export default defineNuxtConfig({
   yandexMaps: {
     apikey: '82465031-f316-42e2-b751-e224296cebe9',
   },
+
+  // supabase: {
+  //   url: process.env.SUPABASE_URL,
+  //   key: process.env.SUPABASE_KEY,
+  //   redirectOptions: {
+  //     login: '/login',
+  //     callback: '/confirm',
+  //     include: undefined,
+  //     exclude: [],
+  //     saveRedirectToCookie: false,
+  //   }
+  // },
 
   css: [
     '@/assets/styles/base/global.scss',
