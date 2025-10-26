@@ -244,16 +244,7 @@ watch(coord, () => {
         }
     }
 
-    &__input {
-        padding: 14px;
-        border-radius: 1.875rem;
-        border: 1.5px solid black;
-        outline: none;
-    }
 
-    &__error {
-        color: red;
-    }
 
     &__address {
         display: flex;
@@ -265,8 +256,6 @@ watch(coord, () => {
         }
     }
 
-    .invalid {
-        border-color: red;
-    }
+
 }
 </style>

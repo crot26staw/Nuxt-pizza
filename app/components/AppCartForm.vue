@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import { vMaska } from "maska/vue"
 import { useForm } from 'vee-validate';
 import * as yup from 'yup';
 
 const props = defineProps(['address']);
-const { errors, handleSubmit, defineField } = useForm({
+const { errors, handleSubmit, defineField, resetForm } = useForm({
     validationSchema: yup.object({
         name: yup.string()
             .matches(/^[a-zA-Zа-яА-ЯёЁ\s]+$/, 'Имя может содержать только русские и английские буквы')
@@ -18,6 +17,7 @@ const { errors, handleSubmit, defineField } = useForm({
 
 const onSubmit = handleSubmit(values => {
     alert(JSON.stringify(values, null, 2));
+    resetForm();
 });
 
 const [name, nameAttrs] = defineField('name');
@@ -29,12 +29,8 @@ const [phone, phoneAttrs] = defineField('phone');
             <p>Адрес:</p>
             <span>{{ address ? address : 'Укажите адрес на карте' }}</span>
         </div>
-        <input type="text" v-model="name" v-bind="nameAttrs" name="name" class="cart__input"
-            :class="{ invalid: errors.name }" placeholder="Имя">
-        <div v-if="errors.name" class="cart__error">{{ errors.name }}</div>
-        <input type="text" v-model="phone" v-bind="phoneAttrs" name="phone" class="cart__input"
-            :class="{ invalid: errors.phone }" v-maska="'+7 (###)-###-##-##'" placeholder="Телефон" />
-        <div v-if="errors.phone" class="cart__error">{{ errors.phone }}</div>
+        <AppInput v-model="name" :name="name" :inputName="'name'" :nameAttrs="nameAttrs" :errors="errors.name" :placeholder="'Имя'" />
+        <AppInput v-model="phone" :name="phone" :inputName="'phone'" :name-attrs="phoneAttrs" :errors="errors.phone" :placeholder="'Телефон'"/>
         <button class="cart__order-btn">Оформить заказ</button>
     </form>
 </template>
