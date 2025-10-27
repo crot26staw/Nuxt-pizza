@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
-    layout: 'auth'
+    layout: 'auth',
+    // middleware: 'auth'
 })
 
 import { useForm } from 'vee-validate';
@@ -15,9 +16,13 @@ const { errors, handleSubmit, defineField, resetForm } = useForm({
     }),
 });
 
-const onSubmit = handleSubmit(values => {
-    alert(JSON.stringify(values, null, 2));
+const onSubmit = handleSubmit(async values => {
+    // alert(JSON.stringify(values, null, 2));
+    console.log(values.email);
     resetForm();
+
+    const auth = useCookie('auth');
+    auth.value = JSON.stringify(values);
 });
 
 const [email, emailAttrs] = defineField('email');

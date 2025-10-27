@@ -66,18 +66,6 @@ export default defineNuxtConfig({
     apikey: '82465031-f316-42e2-b751-e224296cebe9',
   },
 
-  // supabase: {
-  //   url: process.env.SUPABASE_URL,
-  //   key: process.env.SUPABASE_KEY,
-  //   redirectOptions: {
-  //     login: '/login',
-  //     callback: '/confirm',
-  //     include: undefined,
-  //     exclude: [],
-  //     saveRedirectToCookie: false,
-  //   }
-  // },
-
   css: [
     '@/assets/styles/base/global.scss',
     '@/assets/styles/base/fonts.scss',

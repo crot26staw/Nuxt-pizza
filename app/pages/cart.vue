@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 
-import { useCartStore } from '#imports';
 import { shallowRef } from 'vue';
 import type { YMap, DomEventHandler } from '@yandex/ymaps3-types';
 import {
