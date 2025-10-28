@@ -16,8 +16,8 @@ const value = computed({
 </script>
 <template>
     <div>
-        <input v-if="inputName === 'phone'" type="text" class="input s" :class="{ invalid: errors }" v-model="value" v-bind="nameAttrs" v-maska="'+7 (###)-###-##-##'" :name="name" :placeholder="placeholder">
-        <input v-else type="text" class="input" :class="{ invalid: errors }" v-model="value" v-bind="nameAttrs" :name="name" :placeholder="placeholder">
+        <input v-if="inputName === 'phone'" type="text" class="input s" :class="{ invalid: errors }" v-model="value" v-bind="nameAttrs" :name="inputName" v-maska="'+7 (###)-###-##-##'" :placeholder="placeholder">
+        <input v-else type="text" class="input" :class="{ invalid: errors }" v-model="value" v-bind="nameAttrs" :name="inputName" :placeholder="placeholder">
         <div v-if="errors" class="error">{{ errors }}</div>
     </div>
 </template>

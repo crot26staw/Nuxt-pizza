@@ -486,10 +486,12 @@
     ],
     "users": [
         {
-            "id": 1,
             "name": "Дмитрий",
-            "phone": "+7 (928)-335-38-98",
             "email": "crot26staww@gmail.com"
+        },
+        {
+            "name": "Иван",
+            "email": "Vanya@gmail.com"
         }
     ]
 }

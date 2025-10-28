@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useCartStore } from '#imports';
+
 const cart = useCartStore();
 
 </script>
@@ -10,14 +10,19 @@ const cart = useCartStore();
             <NuxtImg src="/logo.svg" width="30px" height="30px" />
             <p class="AppHeader__name">Nuxt-pizza</p>
         </NuxtLink>
-        <NuxtLink to="/cart/" class="AppHeader__cart">
-            <p class="AppHeader__string">{{ cart.cart.total }} ₽</p>
-            <span class="AppHeader__line"></span>
-            <div class="AppHeader__count">
-                <NuxtImg src="/cart.svg" width="19px" height="19px" />
-                <p class="AppHeader__string">{{ cart.cart.totalCount }}</p>
-            </div>
-        </NuxtLink>
+        <div class="AppHeader__flex">
+            <NuxtLink to="/account">
+                <NuxtImg src="/account.svg" width="40px" height="40px" />
+            </NuxtLink>
+            <NuxtLink to="/cart/" class="AppHeader__cart">
+                <p class="AppHeader__string">{{ cart.cart.total }} ₽</p>
+                <span class="AppHeader__line"></span>
+                <div class="AppHeader__count">
+                    <NuxtImg src="/cart.svg" width="19px" height="19px" />
+                    <p class="AppHeader__string">{{ cart.cart.totalCount }}</p>
+                </div>
+            </NuxtLink>
+        </div>
     </header>
 </template>
 
@@ -41,6 +46,12 @@ const cart = useCartStore();
         font-weight: 600;
         color: black;
         text-decoration: none;
+    }
+
+    &__flex{
+        display: flex;
+        gap: 12px;
+        align-items: center;
     }
 
     &__cart {

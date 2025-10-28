@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+import AppBtn from '~/components/ui/AppBtn.vue';
+import type { User } from '~/shared/types/user';
 definePageMeta({
     layout: 'auth',
-    // middleware: 'auth'
+    middleware: 'login'
 })
 
 import { useForm } from 'vee-validate';
@@ -16,13 +18,27 @@ const { errors, handleSubmit, defineField, resetForm } = useForm({
     }),
 });
 
-const onSubmit = handleSubmit(async values => {
-    // alert(JSON.stringify(values, null, 2));
-    console.log(values.email);
-    resetForm();
+let isError = ref<string>('');
 
-    const auth = useCookie('auth');
-    auth.value = JSON.stringify(values);
+const onSubmit = handleSubmit(async values => {
+    resetForm();
+    const { data, status, error, refresh } = await useFetch<User[]>('http://localhost:3001/users', {
+        params: { email: values.email },
+    })
+
+    if (error.value) {
+        console.error('Ошибка при запросе:', error.value)
+        isError.value = 'Произошла ошибка при отправке'
+    } else if (!data.value || Object.keys(data.value).length === 0) {
+        isError.value = 'Пользователь не найден'
+    } else {
+        const user = data.value?.[0];
+        const auth = useCookie('auth');
+        auth.value = JSON.stringify(user?.name);
+        isError.value = '';
+        await navigateTo('/account/');
+    }
+
 });
 
 const [email, emailAttrs] = defineField('email');
@@ -35,12 +51,18 @@ const [email, emailAttrs] = defineField('email');
             <form class="login__form" @submit="onSubmit">
                 <AppInput v-model="email" :name="email" :inputName="'email'" :nameAttrs="emailAttrs"
                     :errors="errors.email" :placeholder="'Почта'" />
-                <button>Авторизоваться</button>
+                <AppBtn :value="'Авторизоваться'" />
             </form>
+            <p v-if="isError != ''" class="login__error">{{ isError }}</p>
+            <div class="login__strings">
+                <NuxtLink class="login__str" to="/signup">Зарегистрироваться</NuxtLink>
+                <span>/</span>
+                <NuxtLink class="login__str" to="/">На главную</NuxtLink>
+            </div>
         </div>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .login-page {
     height: 100vh;
     display: flex;
@@ -50,7 +72,7 @@ const [email, emailAttrs] = defineField('email');
 
 .login {
     padding: 20px;
-    width: 550px;
+    width: 450px;
     border-radius: 20px;
 
     &__title {
@@ -62,24 +84,28 @@ const [email, emailAttrs] = defineField('email');
     &__form {
         margin-top: 32px;
     }
-}
 
-button {
-    width: 100%;
-    margin-top: 12px;
-    padding: 0.75rem 1rem;
-    cursor: pointer;
-    background: #eb5a1e;
-    border: 1px solid #eb5a1e;
-    border-radius: 1.875rem;
-    transition: all 0.3s;
-    color: white;
-    font-size: 20px;
-    transition: all 0.3s;
-    text-align: center;
+    &__error{
+        margin-top: 8px;
+        font-size: 18px;
+        color: red;
+    }
 
-    &:hover {
-        background: #ff8150;
+    &__strings{
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    &__str{
+        font-size: 14px;
+        color: black;
+        transition: all 0.3s;
+
+        &:hover{
+            color: #eb5a1e;
+        }
     }
 }
 </style>
