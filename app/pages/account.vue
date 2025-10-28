@@ -12,7 +12,6 @@ const logoutAuth = () => {
 
 const user = useCookie('auth');
 
-console.log(user.value);
 </script>
 <template>
     <div class="account">

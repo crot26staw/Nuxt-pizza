@@ -7,7 +7,6 @@
 <style lang="scss" scoped>
 button {
     width: 100%;
-    margin-top: 12px;
     padding: 0.75rem 1rem;
     cursor: pointer;
     background: #eb5a1e;

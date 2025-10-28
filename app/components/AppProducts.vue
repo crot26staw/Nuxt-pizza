@@ -13,7 +13,7 @@ const { data, status, error, refresh, clear } = await useAsyncData<PaginatedProd
             cat_slug: category.value,
             _sort: sort.value,
             _page: page.value,
-            _per_page: '4',
+            _per_page: '8',
         },
     }), {
     watch: [category, sort, page]
