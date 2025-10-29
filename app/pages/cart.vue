@@ -91,7 +91,7 @@ watch(coord, () => {
                             </yandex-map>
                         </ClientOnly>
                     </div>
-                    <AppCartForm :address="address"/>
+                    <AppCartForm :address="address" :cart="cart.cart" @cartClear="cart.cartClear"/>
                 </div>
             </div>
         </div>

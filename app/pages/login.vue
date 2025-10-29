@@ -22,21 +22,18 @@ let isError = ref<string>('');
 
 const onSubmit = handleSubmit(async (values) => {
   try {
-    // 1️⃣ Проверяем, существует ли пользователь с таким email
     const users = await $fetch<User[]>('http://localhost:3001/users', {
       params: { email: values.email },
     });
 
-    // 2️⃣ Если ошибка или пустой массив — пользователь не найден
     if (!users || users.length === 0) {
       isError.value = 'Пользователь не найден';
       return;
     }
 
-    // 3️⃣ Пользователь найден — сохраняем cookie и переходим
     const user = users[0];
     const auth = useCookie('auth');
-    auth.value = JSON.stringify(user?.name);
+    auth.value = JSON.stringify(user);
 
     isError.value = '';
     resetForm();

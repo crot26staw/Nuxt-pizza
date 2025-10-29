@@ -47,3 +47,14 @@ export interface Params {
     weight: string,
     size: number
 }
+
+export interface Order {
+    id: string,
+    name: string,
+    email: string,
+    cartData: {
+        totalCount: number,
+        total: number,
+        products: Product[]
+    }
+}

@@ -38,7 +38,6 @@ const onSubmit = handleSubmit(async (values) => {
                 body: values,
             });
 
-            // 3️⃣ Сохраняем cookie и перенаправляем
             const auth = useCookie('auth');
             auth.value = JSON.stringify(values.name);
             isError.value = '';
