@@ -234,5 +234,22 @@ export default defineNuxtConfig({
     discoverImages: false,
     discoverVideos: false,
     xslTips: import.meta.dev,
+    async urls() {
+      const products = await fetch('http://localhost:3001/products').then(res => res.json())
+
+      return products.map(p => ({
+        loc: `/product/${p.slug}`,
+        lastmod: p.updatedAt,
+        changefreq: 'weekly',
+        priority: 0.8
+      }))
+    }
   },
+
+  routeRules: {
+    '/login/**': { robots: false },
+    '/account/**': { robots: false },
+    '/signup/**': { robots: false },
+    '/cart/**': { robots: false },
+  }
 });

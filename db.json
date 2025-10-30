@@ -1178,6 +1178,11 @@
       "id": "bde9",
       "name": "ДмитрийКарелин",
       "email": "crot26staww@mail.ru"
+    },
+    {
+      "id": "5e1b",
+      "name": "Коляски модульные",
+      "email": "sdgf@mail.ru"
     }
   ],
   "orders": [
@@ -1318,6 +1323,29 @@
             },
             "price": 345,
             "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "bbad",
+      "name": "Дмитрий",
+      "email": "crot26staww@gmail.com",
+      "cartData": {
+        "totalCount": 1,
+        "total": 290,
+        "products": [
+          {
+            "id": "3",
+            "name": "Креветки по-азиатски",
+            "slug": "krevetki-po-aziatsky",
+            "img": "/krevetka.png",
+            "params": {
+              "weight": "традиционное",
+              "size": 40
+            },
+            "price": 290,
+            "count": 1
           }
         ]
       }
